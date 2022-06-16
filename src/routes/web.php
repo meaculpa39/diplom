@@ -14,6 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
     Route::get('/', function () {
-        return view('welcome');
+        return view('main');
     });
+    Route::get('/blog', function () {
+        return view('blog');
+    });
+    Route::get('/blog/1', function () {
+        return view('blog-single');
+    });
+    Route::get('/about', function () {
+        return view('about');
+    });
+    Route::get('/contact', function () {
+        return view('contact');
+    });
+    Route::get('/coming-soon', function () {
+        return view('coming-soon');
+    });
+    Route::get('/404', function () {
+        return view('404');
+    });
+
 });
